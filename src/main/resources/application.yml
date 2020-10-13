@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: leap-collector
+    data:
+        mongodb:
+            uri: mongodb://localhost/leap_collector
+logging:
+    level:
+      com.cognizant.leap.data.collector.gitlab.clients.GitLabClient: OFF
+
+    pattern:
+        console: '%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n'
+
+scheduler:
+  cron: 0 0/1 * * * *
+  enable: true
+gitlab:
+    url: http://10.120.100.108:8929/
+    token: Sx5VJzfHyxKDHoZW1sVp
+
