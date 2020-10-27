@@ -1,9 +1,10 @@
 spring:
     application:
-        name: leap-collector
+        name: dashboard-collector
     data:
         mongodb:
-            uri: mongodb://localhost/leap_collector
+            uri: mongodb://idashboard:${spring.data.mongodb.credents}@10.120.100.231/idashboard
+            credents: ENC(rwQEK1M5vbHwwhhqx6pBDHn4Ut4IrKHbBUsrB0AUR8XHc8GN/Sf4IRVma96OWroe)
 logging:
     level:
       com.cognizant.leap.data.collector.gitlab.clients.GitLabClient: OFF
@@ -16,5 +17,12 @@ scheduler:
   enable: true
 gitlab:
     url: http://10.120.100.108:8929/
-    token: Sx5VJzfHyxKDHoZW1sVp
+#    token: Sx5VJzfHyxKDHoZW1sVp
+    token: ENC(FzA8eAgQPlD3J3UHeGb+3MAkGjdz6K9t5s25AevAN309hQSiRUSCJV9Du55layuGQ3aYvl+BUzx8lr3LBPT8Tg==)
+
+
+jasypt:
+  encryptor:
+    algorithm: PBEWITHHMACSHA512ANDAES_256
+    password: LeapSecurityKey
 
