@@ -1,24 +1,24 @@
 spring:
-    application:
-        name: dashboard-collector
-    data:
-        mongodb:
-            uri: mongodb://idashboard:${spring.data.mongodb.credents}@10.120.100.231/idashboard
-            credents: ENC(rwQEK1M5vbHwwhhqx6pBDHn4Ut4IrKHbBUsrB0AUR8XHc8GN/Sf4IRVma96OWroe)
+  application:
+    name: dashboard-collector
+  data:
+    mongodb:
+      uri: mongodb://idashboard:${spring.data.mongodb.credents}@10.120.100.231/idashboard
+      credents: ENC(1rf2YUrEDfwjvGf7h5+Azqx/rkH0XJpU0uQfyhMBrYA5IbcPe8EurMMkAAX/CGNN)
 logging:
-    level:
-      com.cognizant.leap.data.collector.gitlab.clients.GitLabClient: OFF
+  level:
+    com.cognizant.leap.data.collector.gitlab.clients.GitLabClient: OFF
 
-    pattern:
-        console: '%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n'
+  pattern:
+    console: '%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n'
 
 scheduler:
   cron: 0 0/1 * * * *
   enable: true
 gitlab:
-    url: http://10.120.100.108:8929/
-#    token: Sx5VJzfHyxKDHoZW1sVp
-    token: ENC(FzA8eAgQPlD3J3UHeGb+3MAkGjdz6K9t5s25AevAN309hQSiRUSCJV9Du55layuGQ3aYvl+BUzx8lr3LBPT8Tg==)
+  url: http://10.120.100.108:8929/
+  #    token: Sx5VJzfHyxKDHoZW1sVp
+  token: ENC(FzA8eAgQPlD3J3UHeGb+3MAkGjdz6K9t5s25AevAN309hQSiRUSCJV9Du55layuGQ3aYvl+BUzx8lr3LBPT8Tg==)
 
 
 jasypt:
