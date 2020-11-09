@@ -4,11 +4,10 @@ spring:
   data:
     mongodb:
       uri: mongodb://idashboard:${spring.data.mongodb.credents}@10.120.100.231/idashboard
-      credents: ENC(1rf2YUrEDfwjvGf7h5+Azqx/rkH0XJpU0uQfyhMBrYA5IbcPe8EurMMkAAX/CGNN)
+      credents: ENC(4litQ6Gs+nMxT88Dxa5hy8/peZ3m46Va/aeFy2vHw/PFqoBDhVseIETBNKgPnimJ)
 logging:
   level:
     com.cognizant.leap.data.collector.gitlab.clients.GitLabClient: OFF
-
   pattern:
     console: '%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n'
 
@@ -18,11 +17,9 @@ scheduler:
 gitlab:
   url: http://10.120.100.108:8929/
   #    token: Sx5VJzfHyxKDHoZW1sVp
-  token: ENC(FzA8eAgQPlD3J3UHeGb+3MAkGjdz6K9t5s25AevAN309hQSiRUSCJV9Du55layuGQ3aYvl+BUzx8lr3LBPT8Tg==)
-
+  token: ENC(Z4sUT6WBiCTM+zmJ+ui/YMHvmQbFyIujB1ZdGFEzRJqGIpc+LBTrMwrvm0XIe+imeYHHvPVq4Mum9exuqsnR0g==)
 
 jasypt:
   encryptor:
-    algorithm: PBEWITHHMACSHA512ANDAES_256
-    password: LeapSecurityKey
-
+    password: dndCMiFLdGR5dktqJnY0dQ==
+    bean: JasyptEncryptorBean

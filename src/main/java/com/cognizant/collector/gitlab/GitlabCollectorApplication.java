@@ -17,9 +17,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableAutoConfiguration
 @EnableEncryptableProperties
 public class GitlabCollectorApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(GitlabCollectorApplication.class, args);
 	}
-
 }
