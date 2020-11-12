@@ -28,7 +28,7 @@ import java.util.Map;
 })
 @Data
 @EqualsAndHashCode(callSuper = true)
-@Document(collection = "gitlabCommits")
+@Document(collection = "source_gitlabCommits")
 public class GitLabCommit extends GitLabBaseDetails {
 
     @JsonProperty("id")
