@@ -7,6 +7,7 @@ import feign.Response;
 import feign.jackson.JacksonDecoder;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.cognizant.collector.gitlab.constants.Constants.SOURCE;
+
 /**
  * Created by 784420 on 10/15/2019 2:28 PM
  */
@@ -28,6 +31,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class GitLabCommonUtility {
 
+    public static String collectionName;
     private final JacksonDecoder decoder = new JacksonDecoder();
     private final HttpHeaders headers = new HttpHeaders();
     private GitLabClient client;
@@ -48,14 +52,14 @@ public class GitLabCommonUtility {
      * @return return the response with mentioned body type
      * @throws IOException if any issue, while parsing the response body. it will throw the exception
      */
-    public <T> ResponseEntity<T> getResponse(URI uri, Type type, HttpHeaders headers) throws IOException {
-        if (headers == null) headers = this.headers;
-        Response response = client.getResponse(uri, headers);
-        HttpHeaders httpHeaders = new HttpHeaders();
-        response.headers().forEach((key, value) -> httpHeaders.put(key, new ArrayList<>(value)));
-        T object = (T) decoder.decode(response, type);
-        return ResponseEntity.status(response.status()).headers(httpHeaders).body(object);
-    }
+//    public <T> ResponseEntity<T> getResponse(URI uri, Type type, HttpHeaders headers) throws IOException {
+//        if (headers == null) headers = this.headers;
+//        Response response = client.getResponse(uri, headers);
+//        HttpHeaders httpHeaders = new HttpHeaders();
+//        response.headers().forEach((key, value) -> httpHeaders.put(key, new ArrayList<>(value)));
+//        T object = (T) decoder.decode(response, type);
+//        return ResponseEntity.status(response.status()).headers(httpHeaders).body(object);
+//    }
 
     /**
      * @param type            return type of the response body
@@ -88,5 +92,14 @@ public class GitLabCommonUtility {
      */
     public HttpHeaders getHeaders() {
         return headers;
+    }
+
+    @Value("${spring.data.mongodb.collection}")
+    public void setCollectionName(String collectionName) {
+        this.collectionName = SOURCE+collectionName;
+    }
+
+    public static String getCollectionName(){
+        return collectionName;
     }
 }

@@ -34,10 +34,10 @@ public class GitLabComponent {
     private ObjectMapper objectMapper = new ObjectMapper();
     private HttpHeaders requestHeader = new HttpHeaders();
 
-    @Value("${gitlab.url}")
-    private String gitLabUrl;
-    @Value("${gitlab.token}")
-    private String token;
+//    @Value("${gitlab.url}")
+//    private String gitLabUrl;
+//    @Value("${gitlab.token}")
+//    private String token;
 
     @PostConstruct
     private void postConstructMethod() {
