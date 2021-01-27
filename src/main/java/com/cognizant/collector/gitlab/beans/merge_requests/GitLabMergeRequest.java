@@ -1,4 +1,6 @@
-package com.cognizant.collector.gitlab.beans.merge_requests;
+//Commented to fix SAST issue. Reffered to Future Implementation
+
+/*package com.cognizant.collector.gitlab.beans.merge_requests;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
@@ -111,3 +113,4 @@ public class GitLabMergeRequest {
     }
 
 }
+*/

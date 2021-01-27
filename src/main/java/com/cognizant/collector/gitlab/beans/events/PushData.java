@@ -1,5 +1,6 @@
+//Commented to fix SAST issue. Reffered to Future Implementation
 
-package com.cognizant.collector.gitlab.beans.events;
+/*package com.cognizant.collector.gitlab.beans.events;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
@@ -48,3 +49,4 @@ public class PushData {
     }
 
 }
+*/

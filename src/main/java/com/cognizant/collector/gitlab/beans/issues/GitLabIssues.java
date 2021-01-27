@@ -1,5 +1,6 @@
+//Commented to fix SAST issue. Reffered to Future Implementation
 
-package com.cognizant.collector.gitlab.beans.issues;
+/*package com.cognizant.collector.gitlab.beans.issues;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
@@ -88,3 +89,4 @@ public class GitLabIssues {
     }
 
 }
+*/
