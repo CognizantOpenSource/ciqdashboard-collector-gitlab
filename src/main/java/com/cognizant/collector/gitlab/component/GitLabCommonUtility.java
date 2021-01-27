@@ -31,7 +31,7 @@ import static com.cognizant.collector.gitlab.constants.Constants.SOURCE;
 @AllArgsConstructor
 public class GitLabCommonUtility {
 
-    public static String collectionName;
+    static String collectionName;
     private final JacksonDecoder decoder = new JacksonDecoder();
     private final HttpHeaders headers = new HttpHeaders();
     private GitLabClient client;
