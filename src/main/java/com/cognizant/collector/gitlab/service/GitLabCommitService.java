@@ -28,9 +28,9 @@ public class GitLabCommitService {
      * @param commit commit details
      * @return return commit details post storing in DB
      */
-    public GitLabCommit saveCommit(GitLabCommit commit) {
-        return repository.save(commit);
-    }
+//    public GitLabCommit saveCommit(GitLabCommit commit) {
+//        return repository.save(commit);
+//    }
 
     /**
      * Store List of commit details in the Database
@@ -47,16 +47,16 @@ public class GitLabCommitService {
      *
      * @return list of commits
      */
-    public List<GitLabCommit> getAll() {
-        return repository.findAll();
-    }
+//    public List<GitLabCommit> getAll() {
+//        return repository.findAll();
+//    }
 
     /**
      * Remove all documents from the collection
      */
-    public void deleteAllCommits() {
-        repository.deleteAll();
-    }
+//    public void deleteAllCommits() {
+//        repository.deleteAll();
+//    }
 
     public String getLastCommitDate(Object projectNameOrId){
         String since = "";
