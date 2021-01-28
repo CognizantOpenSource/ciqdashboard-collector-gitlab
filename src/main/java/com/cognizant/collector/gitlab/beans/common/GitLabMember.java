@@ -1,4 +1,5 @@
-package com.cognizant.collector.gitlab.beans.common;
+//commented to fix SAST issues
+/*package com.cognizant.collector.gitlab.beans.common;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
@@ -50,3 +51,4 @@ public class GitLabMember {
     }
 
 }
+ */
